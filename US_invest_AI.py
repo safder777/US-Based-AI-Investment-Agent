@@ -6,7 +6,7 @@ from typing import Literal, TypedDict
 import pdfkit
 
 # ========== CONFIG ==========
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "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")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "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")
 openai_llm = ChatOpenAI(model_name="gpt-4o", temperature=0.2, api_key=OPENAI_API_KEY)
 
 # ========== STATE STRUCTURE ==========
