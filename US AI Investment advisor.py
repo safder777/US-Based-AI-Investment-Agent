@@ -1,15 +1,27 @@
 
+# import streamlit as st
+# from langgraph.graph import StateGraph, END
+# from langchain_openai import ChatOpenAI
+# from dotenv import load_dotenv
+# import os
+# from typing import Literal, TypedDict
+
+# # ========== CONFIG ==========
+# load_dotenv()
+# OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+# openai_llm = ChatOpenAI(model_name="gpt-4o", temperature=0.2, api_key=OPENAI_API_KEY)
+
+#code above is to run locally , it has been replaced with few other lines to work on streamlit
+
 import streamlit as st
 from langgraph.graph import StateGraph, END
 from langchain_openai import ChatOpenAI
-from dotenv import load_dotenv
-import os
 from typing import Literal, TypedDict
 
 # ========== CONFIG ==========
-load_dotenv()
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 openai_llm = ChatOpenAI(model_name="gpt-4o", temperature=0.2, api_key=OPENAI_API_KEY)
+
 
 # ========== STATE STRUCTURE ==========
 class InvestorState(TypedDict):
